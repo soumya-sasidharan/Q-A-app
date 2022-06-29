@@ -1,19 +1,27 @@
 
 .main{
-    border: 5px;
-    border-width: 40;
+    border: 4px;
+    border-width: 10;
     border-style: solid;
+    border-color: blueviolet;
     text-align: center;
-    margin: 10px;
+    margin: 100px 10px 0px 10px;
+    height: 300px;
 }
 .question{
     border: 5px;
-    border-style: solid;
-    border-color: red;
+   /* border-style: solid;*/
+    /*border-color: red;*/
+    position: relative;
+    top: 80px;
+    margin: 0px 280px;
 }
 .description{
     border: 5px;
     border-style: solid;
     border-color: aqua;
     font-weight: 100;
+    position: relative;
+    top: 140px;
+    margin: 0px 280px;
 }
