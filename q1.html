@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="q1.css">
     <title>Question One</title>
 </head>
+<script>
+    function myFunction() {
+            document.getElementById("post-comment").innerHTML = document.getElementById("comment").value
+        }
+    function addNewPost(){
+            var comment = document.getElementById("comment").value;
+            var newPost = document.getElementById("newPost");
+            newPost.innerHTML += "<p>" + comment + "</p";
+    }
+    function eraseText(){
+            document.getElementById("comment").value = ' ';
+    }
+</script>
+
 <body>
     <div class="main">
         <div class="question">
-        <h3>How to start working on the developer project?</h3>
+            <!--<h3>How to start working on the developer project?</h3>-->
         </div>
         <div class="description">
-            <h5>What are the necessary steps which we require to take in order to get started with the developer project</h5>
+            <!--<h5>What are the necessary steps which we require to take in order to get started with the developer project</h5>-->
         </div>
     </div>
+    <div id="reply" class="form-group mx-2 my-1 w-50">
+        <textarea id="comment" class="form-control" rows="1" placeholder="Write Answer Here"></textarea>
+        <input type="submit" class="btn btn-info mx-1" value="Post" onclick="addNewPost()" onclick="eraseText()">
+    </div>
+    <div id="newPost">
+        <p id="post-comment"></p>
+    </div>
 </body>
+
 </html>
