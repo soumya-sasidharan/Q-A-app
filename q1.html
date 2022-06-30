@@ -15,13 +15,10 @@
     function myFunction() {
             document.getElementById("post-comment").innerHTML = document.getElementById("comment").value
         }
-    function addNewPost(){
-
-    }
     function addPost() {
             var comment = document.getElementById("comment").value;
             let newComment = document.createElement('div')
-            newComment.style = 'Border-style: dashed';
+            newComment.style = 'Border: 4px solid rgb(220, 220, 220); width: 1200px; height: 200px; margin-left: 10px; margin-top: 5px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'
             newComment.innerHTML = comment;
             document.body.appendChild(newComment);
         }
