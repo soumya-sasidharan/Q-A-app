@@ -22,14 +22,12 @@ const headers = {
 const query = {
   operationName: '',
   query: `query {
-    customers {
+    qandAS {
       _id
-      name
-      email
-      address
-      accounts {
-        account_id
-        limit
+      content {
+        title
+        description
+        comments
       }
     }
   }`,
@@ -42,6 +40,7 @@ const options = {
   body: JSON.stringify(query),
 };
 
+//Requesting from the API and sending response 
 (async function fetchData() {
   try {
     const response = await axios({
@@ -50,7 +49,7 @@ const options = {
       headers: headers,
       data: query,
     });
-    console.log(response.data.data);
+    console.log(response.data.data.qandAS);
   } catch (err) {
     console.error(err);
   }
