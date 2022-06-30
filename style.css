@@ -25,3 +25,8 @@ body {
 .form-select{
     align-content: center;
 }
+.center_div{
+    margin: 0 auto;
+    width:80% ;
+    align-content:center;
+}
