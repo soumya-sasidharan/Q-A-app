@@ -95,21 +95,23 @@
                       height="60" />-->
                     <div>
                       <h6 class="fw-bold text-dark mb-1">
-                        Lily
+                        <textarea placeholder="Textarea placeholder"></textarea>
+                       
                       </h6>
-                      <p class="text-muted small mb-0">
-                        Shared publicly - Jan 2020
-                      </p>
+                      
                     </div>
                   </div>
-      
+                  
                   <p class="mt-3 mb-4 pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    consequat.
-                  </p>
-      
+                  
+                   <textarea id='txt'  placeholder="Description"></textarea><br/>
+                  <div id='container'>
+                   
+                    <button type='button' class="btn btn-dark btn-sm" onclick="add()"> Create Post</button>
+                      <!-- <button type='button' class="btn btn-dark btn-sm" onclick="add()"> Delete</button> -->
+                    <div id='contents'>
+                </div>
+               
                   <div class="small d-flex justify-content-start">
                     <a href="#!" class="d-flex align-items-center me-3">
                       <i class="far fa-thumbs-up me-2"></i>
@@ -129,20 +131,28 @@
                   <div class="d-flex flex-start w-100">
                   <!--  <img class="rounded-circle shadow-1-strong me-3"
                       src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fclipart-library.com%2Fimg%2F1277395.jpg&imgrefurl=http%3A%2F%2Fclipart-library.com%2Fyoung-girl-cliparts.html&tbnid=fO4xp-Yz7uJEmM&vet=12ahUKEwjb8ZOK7tL4AhWhgWMGHRJjDroQMygAegUIARDlAQ..i&docid=s513Gv4gbcRWYM&w=736&h=1056&q=freeimages%20clipart&hl=en&ved=2ahUKEwjb8ZOK7tL4AhWhgWMGHRJjDroQMygAegUIARDlAQ" alt="avatar" width="40"
-                      height="40" />-->
+                      height="40" />
                     <div class="form-outline w-100">
                       <textarea class="form-control" id="textAreaExample" rows="4"
                         style="background: #fff;"></textarea>
-                      <label class="form-label" for="textAreaExample">Message</label>
+                      <label class="form-label" for="textAreaExample" >Message</label>
                     </div>
                   </div>
-                  <div class="float-end mt-2 pt-1">
-                    <button type="button" class="btn btn-dark btn-sm">
+                  <div class="float-end mt-2 pt-1">-->
+                   
+
+                <!--  <button type="button" class="btn btn-dark btn-sm" onclick="add()">
+                  
                       Post comment
-                    </button>
+                    </button>-->
+                   <!-- <div id="adduserdata"></div>
+                    <textarea id="txtarea"></textarea>
+                    <input type="button" value="add text" id="add" onclick="showtext()" 
+
+
                     <button type="button" class="btn btn-outline-dark btn-sm">
                       Cancel
-                    </button>
+                    </button>-->
                   </div>
                 </div>
               </div>
@@ -150,9 +160,29 @@
           </div>
         </div>
       </section>
+     
+    </div>
   </body>
+ 
 
-
-
+    <script>
+      var arr = 1;
+      function del(comm_id){
+         var dom =document.getElementById(comm_id);
+         dom.parentNode.removeChild(dom);
+      }
+  
+  function add(){
+      var txt= document.getElementById('txt').value;
+      var content= document.getElementById('contents');
+      var comm_id="comment"+arr;
+      var del_id="delete"+arr;
+      var tes= "<div id="+comm_id+">"+'<hr/><span>'+txt+"</span><button type='button' id="+ del_id + ">delete</button></div>";
+      content.innerHTML+=tes;
+       document.getElementById(del_id).setAttribute('onclick',"del('"+comm_id+"')");
+      arr++;
+  }
+  </script>
+  
 
 </html>
