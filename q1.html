@@ -16,10 +16,15 @@
             document.getElementById("post-comment").innerHTML = document.getElementById("comment").value
         }
     function addNewPost(){
-            var comment = document.getElementById("comment").value;
-            var newPost = document.getElementById("newPost");
-            newPost.innerHTML += "<p>" + comment + "</p";
+
     }
+    function addPost() {
+            var comment = document.getElementById("comment").value;
+            let newComment = document.createElement('div')
+            newComment.style = 'Border-style: dashed';
+            newComment.innerHTML = comment;
+            document.body.appendChild(newComment);
+        }
     function eraseText(){
             document.getElementById("comment").value = ' ';
     }
@@ -28,18 +33,17 @@
 <body>
     <div class="main">
         <div class="question">
-            <!--<h3>How to start working on the developer project?</h3>-->
+            <h3>Where are the Accenture headquaters?</h3>
         </div>
         <div class="description">
-            <!--<h5>What are the necessary steps which we require to take in order to get started with the developer project</h5>-->
+            <h6>Accenture is a multinational company and has bases in various developed countries, however where 
+                do they have their main base or headquaters?
+            </h6>
         </div>
     </div>
     <div id="reply" class="form-group mx-2 my-1 w-50">
         <textarea id="comment" class="form-control" rows="1" placeholder="Write Answer Here"></textarea>
-        <input type="submit" class="btn btn-info mx-1" value="Post" onclick="addNewPost()" onclick="eraseText()">
-    </div>
-    <div id="newPost">
-        <p id="post-comment"></p>
+        <input type="submit" class="btn btn-outline-dark btn-sm mx-1" value="Post" onclick="addPost()">
     </div>
 </body>
 

@@ -4,27 +4,36 @@
     border-width: 10;
     border-style: solid;
     border-color: rgb(220, 220, 220);
-    justify-content: center;
+    /*justify-content: center;*/
     margin: 100px 10px 0px 10px;
     height: 200px;
-    width: auto;
+    left: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .question{
-    border: 5px;
    /* border-style: solid;*/
     /*border-color: red;*/
     position: relative;
-    top: 80px;
-    margin: 0px 280px;
+    justify-content: left;
+    text-align: left;
+    margin: 10px 80px;
 }
 .description{
-    border: 5px;
-    border-style: solid;
-    border-color: aqua;
     font-weight: 100;
     position: relative;
-    margin: 0px 280px;
+    margin: 0px 80px;
+    text-align: left;
+    justify-content: left;
 }
 #reply{
     display: inline-flex;
 }
+/* #newPost{
+    border: 2px;
+    border-style: dashed;
+    width: 1000px;
+    position: relative;
+    margin-left: 10px;
+} */
